@@ -1,10 +1,6 @@
 export function withSizes (mapSizesToProps) {
   return (base) => {
     return class extends base {
-      static get properties () {
-        return { width: Number, height: Number };
-      }
-
       constructor () {
         super();
 
@@ -15,9 +11,6 @@ export function withSizes (mapSizesToProps) {
             const props = mapSizesToProps({
               width: cr.width, height: cr.height
             });
-
-            this.width = cr.width;
-            this.height = cr.height;
 
             for (let key in props) {
               this[key] = props[key];

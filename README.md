@@ -1,6 +1,6 @@
 # Lit Element with sizes
 
-Adds `width` and `height` properties to a LitElement + custom computed ones.
+Enhances LitElement with computed properties based on width and height.
 
 Inspired by https://github.com/renatorib/react-sizes.
 
@@ -24,8 +24,6 @@ export class MyElement extends withSizes(mapSizesToProps)(LitElement) {
   _render (props) {
     return html`
       ${props.isMobile ? this._renderMobile(props) : this._renderDesktop(props)}
-
-      I am ${props.width}&times;${props.height}px
     `;
   }
 

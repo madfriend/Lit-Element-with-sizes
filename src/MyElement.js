@@ -2,14 +2,18 @@ import { withSizes } from './withSizes';
 import { html, LitElement } from '@polymer/lit-element';
 
 const mapSizesToProps = ({ width, height }) => ({
-  isMobile: width < 500
+  isMobile: width < 500,
+
+  // not a very good idea to have these props here:
+  width,
+  height
 });
 
 export class MyElement extends withSizes(mapSizesToProps)(LitElement) {
   static get is () { return 'my-element' };
 
   static get properties () {
-    return { isMobile: Boolean }
+    return { isMobile: Boolean, width: Number, height: Number }
   }
 
   _render (props) {

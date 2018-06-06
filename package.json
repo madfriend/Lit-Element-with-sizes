@@ -1,0 +1,22 @@
+{
+  "name": "lit-element-with-sizes",
+  "version": "1.0.0",
+  "description": "for lit elements that know about their size",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "madfriend",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/lit-element": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}
